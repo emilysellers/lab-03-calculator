@@ -18,3 +18,19 @@ test('adds two numbers', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+import { subtract } from '../calculations.js';
+
+test('subtracts one number from another', (expect) => {
+    const expected = 3;
+    const actual = subtract(9, 6);
+    expect.equal(actual, expected);
+});
+
+import { divide } from '../calculations.js';
+
+test('divides one number by another', (expect) => {
+    const expected = 20;
+    const actual = divide(100, 5);
+    expect.equal(actual, expected);
+});
