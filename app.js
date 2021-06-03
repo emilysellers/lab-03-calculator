@@ -1,6 +1,6 @@
 // ADDITION CALCULATOR
 // import functions
-import { add } from './calculations.js';
+import { add, subtract, multiply, divide } from './calculations.js';
 
 // reference needed DOM elements
 const addXInput = document.getElementById('add-x-input');
@@ -21,8 +21,6 @@ addButton.addEventListener('click', () => {
 // get user input(s)
 
 // SUBTRACTION CALCULATOR
-import { subtract } from './calculations.js';
-
 const subtractXInput = document.getElementById('subtract-x-input');
 const subtractYInput = document.getElementById('subtract-y-input');
 const subtractButton = document.getElementById('subtract-button');
@@ -37,7 +35,6 @@ subtractButton.addEventListener('click', () => {
 });
 
 // DIVISION CALCULATOR
-import { divide } from './calculations.js';
 const divideXInput = document.getElementById('divide-x-input');
 const divideYInput = document.getElementById('divide-y-input');
 const divideButton = document.getElementById('divide-button');
@@ -52,4 +49,15 @@ divideButton.addEventListener('click', () => {
 });
 
 // MULTIPLICATION CALCULATOR
+const multiplyXInput = document.getElementById('multiply-x-input');
+const multiplyYInput = document.getElementById('multiply-y-input');
+const multiplyButton = document.getElementById('multiply-button');
+const multiplyResult = document.getElementById('multiply-result');
 
+multiplyButton.addEventListener('click', () => {
+    const x = Number(multiplyXInput.value);
+    const y = Number(multiplyYInput.value);
+    const result = multiply(x, y);
+
+    multiplyResult.textContent = result;
+});

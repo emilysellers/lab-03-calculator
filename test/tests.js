@@ -34,3 +34,14 @@ test('divides one number by another', (expect) => {
     const actual = divide(100, 5);
     expect.equal(actual, expected);
 });
+
+import { multiply } from '../calculations.js';
+
+test('multiplies two numbers', (expect) => {
+    const expected = 50;
+    const actual = multiply(25, 2);
+    expect.equal(actual, expected);
+});
+
+
+
